@@ -7,7 +7,7 @@ interface TagBlockProps {
 
 const TagBlock: FC<TagBlockProps> = ({ tags }) => {
   return (
-    <Container className="mb-1">
+    <Container className="mb-2">
       <span>Tags:</span>
       {tags.map((tag) => (
         <a href="#" key={tag}>
