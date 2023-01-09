@@ -2,17 +2,20 @@ import Head from "next/head";
 import Navigation from "../components/navigation";
 import { GetStaticProps, GetStaticPaths } from "next";
 import { Container, Stack } from "react-bootstrap";
+import { getData } from "../services/dummyData";
 
-export const getStaticProps: GetStaticProps = () => {
-    let test = "test"
+export const getStaticProps: GetStaticProps = async() => {
+    let data = await getData()
     return {
         props: {
-            test
+            data
         }
     }
 }
 
-export default function TestPage() {
+export default function TestPage({data}:{data:any}) {
+
+  console.log(data)
     return (
         <>
         <Head>
@@ -34,6 +37,13 @@ export default function TestPage() {
         </Container>
         <Container style={{display: 'flex', alignItems:'center', justifyContent:'center', marginTop:'30px'}}>
             <h1>Does this work?</h1>
+        </Container>
+        <Container style={{display: 'flex', alignItems:'center', justifyContent:'center', marginTop:'30px'}}>
+          <Stack gap={1} direction="vertical" className="text-center">
+          {data.map((user:any)=>
+            <h3 key={user.id}>{user.firstName}</h3>
+          )}
+          </Stack>
         </Container>
         </>
     )
