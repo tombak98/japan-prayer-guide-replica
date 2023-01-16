@@ -54,9 +54,15 @@ export default function BootstrapPage({data}:{data:any}) {
         <Container>
             <h1 style={{margin: '100px', textAlign:'center'}}>Japan needs prayer, lorom ipsum, hello hello hello hello hello hello hello hello hello hello hello hello hello hello hello</h1>
         </Container>
-        <Container>
-            <Card>
-                
+        <Container style={{display:'flex', justifyContent:'center', height:'800px'}}>
+            <Card style={{width: '600px', height:'500px', boxShadow:'0px 0px 3px 3px rgba(0,0,0,0.5'}}>
+                <Card.Img variant="top" src="/bamboo.jpeg"></Card.Img>
+                <Card.Body>
+                    <Card.Text>
+                        This is some test text for Japan
+                    </Card.Text>
+                    <Button variant="primary">See More</Button>
+                </Card.Body>
             </Card>
         </Container>
         </>
