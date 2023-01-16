@@ -1,8 +1,15 @@
 import Head from "next/head";
 import Navigation from "../components/navigation";
 import { GetStaticProps, GetStaticPaths } from "next";
-import { Container, Stack } from "react-bootstrap";
+import { Stack } from "react-bootstrap";
 import { getData } from "../services/dummyData";
+import Container from 'react-bootstrap/Container';
+import Row from 'react-bootstrap/Row';
+import Col from 'react-bootstrap/Col';
+import Image from "next/image";
+import Bamboo from '../public/bamboo.jpeg'
+import Button from "react-bootstrap/Button";
+import { Card } from "react-bootstrap";
 
 export const getStaticProps: GetStaticProps = async() => {
     let data = 'hi'
@@ -34,8 +41,23 @@ export default function BootstrapPage({data}:{data:any}) {
           </Container>
         </Stack>
         </Container>
-        <Container style={{display: 'flex', alignItems:'center', justifyContent:'center', marginTop:'30px'}}>
-            <h1>Does this work?</h1>
+        <Container id="header-image-container" style={{position: 'relative', margin: 0, padding: 0, height: '600px', width: '100%', maxWidth:'none', display:'flex', alignItems:'center', justifyContent:'center'}}>
+            <Image layout='fill' style={{opacity: 0.5, position: 'relative'}} alt="japan" src='/bamboo.jpeg'></Image>
+            <div style={{height:"100%", width:'auto', zIndex:'999', display:'flex', flexDirection:'column', alignItems:'center', justifyContent:'center', position:'relative'}}>
+                <h1 style={{color:'white', zIndex:'999'}}>Japan needs Prayer</h1>
+                <div style={{position:'absolute', bottom:'50px', display:'flex', gap:'20px', justifyContent:'center' }}>
+                    <button>This is also a button</button>
+                    <button>This is also button</button>
+                </div>
+            </div>
+        </Container>
+        <Container>
+            <h1 style={{margin: '100px', textAlign:'center'}}>Japan needs prayer, lorom ipsum, hello hello hello hello hello hello hello hello hello hello hello hello hello hello hello</h1>
+        </Container>
+        <Container>
+            <Card>
+                
+            </Card>
         </Container>
         </>
     )
