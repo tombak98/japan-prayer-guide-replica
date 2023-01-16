@@ -5,7 +5,7 @@ import { Container, Stack } from "react-bootstrap";
 import { getData } from "../services/dummyData";
 
 export const getStaticProps: GetStaticProps = async() => {
-    let data = await getData()
+    let data = 'hi'
     return {
         props: {
             data
@@ -13,12 +13,12 @@ export const getStaticProps: GetStaticProps = async() => {
     }
 }
 
-export default function TestPage({data}:{data:any}) {
+export default function BootstrapPage({data}:{data:any}) {
 
     return (
         <>
         <Head>
-            <title>Testing Page</title>
+            <title>Bootstrap Page</title>
         </Head>
         <Container
         className="cover-hero md-banner"
@@ -30,19 +30,12 @@ export default function TestPage({data}:{data:any}) {
         <Navigation />
         <Stack gap={1} direction="horizontal" className="mx-auto cover">
           <Container className="narration header text-center text-uppercase">
-            <h1 className="display-6">Title of Testing Page</h1>
+            <h1 className="display-6">Title of Bootstrap Page</h1>
           </Container>
         </Stack>
         </Container>
         <Container style={{display: 'flex', alignItems:'center', justifyContent:'center', marginTop:'30px'}}>
             <h1>Does this work?</h1>
-        </Container>
-        <Container style={{display: 'flex', alignItems:'center', justifyContent:'center', marginTop:'30px'}}>
-          <Stack gap={1} direction="vertical" className="text-center">
-          {data.map((user:any)=>
-            <h3 key={user.id}>{user.firstName}</h3>
-          )}
-          </Stack>
         </Container>
         </>
     )
