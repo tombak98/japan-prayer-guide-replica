@@ -69,13 +69,11 @@ export default function BootstrapPage({data}:{data:any}) {
                         </IconContext.Provider>
                         Pray For
                     </Card.Text>
-                    <Card.Text>
                         <ul style={{fontSize:"0.85rem"}}>
                             <li className="my-3">Wisdom to share the gospel within this Japanese context</li>
                             <li className="my-3">The Holy Spirit would lead those who seek salvation through various rituals to find Jesus Christ</li>
                             <li className="my-3">Japanese people would find their most authentic belonging and identity in the God who created them</li>
                         </ul>
-                    </Card.Text>
                     <Button className="w-100 mt-2" variant="primary" style={{color: "#4592CF", border: "#4592CF 1.5px solid", backgroundColor:"white"}}>Read the entire article</Button>
                     <Card.Text className="my-3 w-100 mx-auto text-center" style={{textDecoration:"underline", color:"#4592CF", cursor:"pointer"}}>
                         View all topics
