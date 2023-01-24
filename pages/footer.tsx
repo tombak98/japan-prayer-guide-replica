@@ -13,6 +13,10 @@ import Button from "react-bootstrap/Button";
 import Card from "react-bootstrap/Card";
 import Form from "react-bootstrap/Form";
 import Image from "react-bootstrap/Image";
+import { IconContext } from "react-icons/lib";
+import { BsYoutube, BsInstagram } from "react-icons/bs";
+import { MdEmail } from 'react-icons/md'
+import { FaAmazon } from "react-icons/fa";
 
 export const getStaticProps: GetStaticProps = async() => {
     let data = 'hi'
@@ -70,6 +74,31 @@ export default function BootstrapPage({data}:{data:any}) {
             <Row className="d-flex justify-content-center align-items-center pb-3">
                 <Image style={{maxHeight:'75px', width:'auto'}} src="https://omf.org/us/wp-content/uploads/2015/04/OMF_LOGO_COL_Web-1024x1024.png" alt="omf logo"></Image>
                 <Image style={{maxHeight:'50px', width:'auto'}} src="https://pioneers.org/wp-content/uploads/2018/09/pioneers_logo_full.png" alt="pioneers logo"></Image>
+            </Row>
+            <Row className="text-center d-flex justify-content-center">
+                <div className="d-flex flex-column text-center" style={{gap: 0, color:'white'}}>
+                    <p className="m-1" style={{fontSize:'1.2rem'}}>Site Map</p>
+                    <p className="m-1" style={{color: '#CECECE'}}>Option 1</p>
+                    <p className="m-1" style={{color: '#CECECE'}}>Option 2</p>
+                    <p className="m-1" style={{color: '#CECECE'}}>Option 3</p>
+                </div>
+            </Row>
+            <Row className="d-flex justify-content-center align-items-center pt-3 pb-2">
+                <Image style={{maxHeight:'100px', width:'auto'}} src="/apple-touch-icon.png" alt="logo"></Image>
+            </Row>
+            <Row className="text-center">
+                <p style={{color: 'white', fontSize:'0.8rem'}}>We desire to see a prayer movement for Japan&apos;s spiritual breakthrough</p>
+            </Row>
+            <Row className="d-flex justify-content-center align-items-center pt-1 pb-3" style={{color:'white'}}>
+                <IconContext.Provider value={{size:'40px'}}>
+                    <BsYoutube style={{width:'auto'}}></BsYoutube>
+                    <BsInstagram style={{width:'auto'}}></BsInstagram>
+                    <MdEmail style={{width:'auto'}}></MdEmail>
+                    <FaAmazon style={{width:'auto'}}></FaAmazon>
+                </IconContext.Provider>
+            </Row>
+            <Row className="text-center py-2">
+                <p style={{color: 'white', fontSize:'0.8rem'}}>Copyright Information Goes Here 2023</p>
             </Row>
         </Container>
         </>
