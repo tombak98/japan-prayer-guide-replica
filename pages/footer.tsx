@@ -61,7 +61,7 @@ export default function BootstrapPage({data}:{data:any}) {
                     <span onClick={()=>setLang(1)} style={lang === 1 ? {textDecoration:'underline #4592CF', cursor:'pointer'} : {cursor:'pointer', color:'#CECECE'}}>Japanese</span>
                 </div>
             </Row>
-            <Row className="text-center d-flex flex-column justify-content-center align-items-center py-3">
+            <Row className="text-center d-flex flex-column justify-content-center align-items-center py-3 px-3">
                 <div style={{maxWidth:"600px"}}>
                     <input style={{border: 'none', backgroundColor:'#002A63', color:'white', borderBottom:'#CECECE 1px solid', borderRadius:0}} 
                     type="email" className="form-control" placeholder="Sign up to get updates from us"></input>
@@ -72,8 +72,8 @@ export default function BootstrapPage({data}:{data:any}) {
                 <p style={{color:'white', fontSize:'0.8rem'}}>In partnership with these ministry organizations</p>
             </Row>
             <Row className="d-flex justify-content-center align-items-center pb-3">
-                <Image style={{maxHeight:'75px', width:'auto'}} src="https://omf.org/us/wp-content/uploads/2015/04/OMF_LOGO_COL_Web-1024x1024.png" alt="omf logo"></Image>
-                <Image style={{maxHeight:'50px', width:'auto'}} src="https://pioneers.org/wp-content/uploads/2018/09/pioneers_logo_full.png" alt="pioneers logo"></Image>
+                <Image style={{maxHeight:'50px', width:'auto'}} src="https://omf.org/us/wp-content/uploads/2015/04/OMF_LOGO_COL_Web-1024x1024.png" alt="omf logo"></Image>
+                <Image style={{maxHeight:'40px', width:'auto'}} src="https://pioneers.org/wp-content/uploads/2018/09/pioneers_logo_full.png" alt="pioneers logo"></Image>
             </Row>
             <Row className="text-center d-flex justify-content-center">
                 <div className="d-flex flex-column text-center" style={{gap: 0, color:'white'}}>
@@ -84,7 +84,7 @@ export default function BootstrapPage({data}:{data:any}) {
                 </div>
             </Row>
             <Row className="d-flex justify-content-center align-items-center pt-3 pb-2">
-                <Image style={{maxHeight:'100px', width:'auto'}} src="/apple-touch-icon.png" alt="logo"></Image>
+                <Image style={{maxHeight:'75px', width:'auto'}} src="/apple-touch-icon.png" alt="logo"></Image>
             </Row>
             <Row className="text-center">
                 <p style={{color: 'white', fontSize:'0.8rem'}}>We desire to see a prayer movement for Japan&apos;s spiritual breakthrough</p>
